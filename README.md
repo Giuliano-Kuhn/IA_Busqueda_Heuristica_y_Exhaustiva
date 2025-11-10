@@ -26,26 +26,26 @@ Muy simple, la inteligencia en las máquinas tiene un costo, y en casos como est
 La búsqueda exhaustiva explora sistemáticamente todas las posibles posiciones hasta encontrar la solución. No utiliza conocimiento previo o heurísticas.
 Para la implementación de esta búsqueda en el código se realizo la búsqueda en profundidad, recorriendo primero la rama izquierda y luego la rama derecha en busca de la solución.
 
-Ventajas:
-Completa: garantiza encontrar la solución si existe.
-Sencillez: fácil de implementar y no requiere conocimientos adicionales del problema.
+#### Ventajas:
+-Completa: garantiza encontrar la solución si existe.
+-Sencillez: fácil de implementar y no requiere conocimientos adicionales del problema.
 
-Limitaciones:
-Ineficiencia: puede ser muy costosa en términos de tiempo y recursos, ya que evalúa todas las posibles soluciones.
-Escalabilidad: en problemas grandes, el espacio de búsqueda puede ser inmanejable.
+#### Limitaciones:
+-Ineficiencia: puede ser muy costosa en términos de tiempo y recursos, ya que evalúa todas las posibles soluciones.
+-Escalabilidad: en problemas grandes, el espacio de búsqueda puede ser inmanejable.
 
 
 ### Buscqueda Heuristica
 La búsqueda heurística utiliza una función de evaluación para guiar la búsqueda hacia las posiciones más prometedoras, en lugar de explorar todas las opciones.
 Para la implementación se tomo como función Heurística, la distancia entre la posición actual y la posición objetivo.
 
-Ventajas:
-Eficiencia: reduce considerablemente el espacio de búsqueda si la heurística está bien diseñada.
-Tiempo de resolución: más rápido en comparación con la búsqueda exhaustiva en problemas grandes.
+#### Ventajas:
+-Eficiencia: reduce considerablemente el espacio de búsqueda si la heurística está bien diseñada.
+-Tiempo de resolución: más rápido en comparación con la búsqueda exhaustiva en problemas grandes.
 
-Limitaciones:
-Incompleta o no óptima: si la heurística es inadecuada, puede llevar a una solución subóptima o no encontrar una solución.
-Diseño de la heurística: requiere conocimiento del problema para definir una función heurística efectiva.
+#### Limitaciones:
+-Incompleta o no óptima: si la heurística es inadecuada, puede llevar a una solución subóptima o no encontrar una solución.
+-Diseño de la heurística: requiere conocimiento del problema para definir una función heurística efectiva.
 
 
 ## Explcacion conceptual
@@ -56,6 +56,6 @@ La longitud de cada rama seria la longitud total en la que los brazos puedan act
 Las rama izquierda está representada por números negativos y la rama derecha está representada por números positivos, porque se toma como punto central al block en su posición actual, lo que si se tiene que mover a una posición objetivo de -3, quiere decir que se tiene que mover el block de su posición actual 3 pasos a la izquierda, y si la posición objetivo fuera 3, seria 3 pasos a la derecha.
 
 
-## Ejecucion
+# Ejecucion
 La ejeucion correcta seria desde el archivo Busquedas_IA.java, ya que allí se muestra el menú de opciones para elegir que busqueda utilizar y donde se establece toda la estructura de datos para resolver el problema.
 
