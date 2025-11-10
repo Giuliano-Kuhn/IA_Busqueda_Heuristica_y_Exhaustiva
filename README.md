@@ -28,10 +28,12 @@ Para la implementación de esta búsqueda en el código se realizo la búsqueda 
 
 #### Ventajas:
 -Completa: garantiza encontrar la solución si existe.
+
 -Sencillez: fácil de implementar y no requiere conocimientos adicionales del problema.
 
 #### Limitaciones:
 -Ineficiencia: puede ser muy costosa en términos de tiempo y recursos, ya que evalúa todas las posibles soluciones.
+
 -Escalabilidad: en problemas grandes, el espacio de búsqueda puede ser inmanejable.
 
 
@@ -41,10 +43,12 @@ Para la implementación se tomo como función Heurística, la distancia entre la
 
 #### Ventajas:
 -Eficiencia: reduce considerablemente el espacio de búsqueda si la heurística está bien diseñada.
+
 -Tiempo de resolución: más rápido en comparación con la búsqueda exhaustiva en problemas grandes.
 
 #### Limitaciones:
 -Incompleta o no óptima: si la heurística es inadecuada, puede llevar a una solución subóptima o no encontrar una solución.
+
 -Diseño de la heurística: requiere conocimiento del problema para definir una función heurística efectiva.
 
 
