@@ -1,8 +1,7 @@
-##Contexto
-
+# Contexto
 Esta es una entrega para una materia de la Universidad XXI, con la que se trata las busquedas Exhaustiva y Heuristica con una orientacion hacia la Inteligencia Artificial.
 
-##Situacion Problematica
+## Situacion Problematica
 
 El problema principal Es el de una planta industrial destinada a la fabricación de motores que cuenta con un proceso de montaje final del producto que se realiza sobre una cinta transportadora recorriendo sucesivos puestos, y en cada uno de ellos se realizan una o varias operaciones.
 
@@ -20,13 +19,12 @@ interrumpe.
 técnica y un tiempo de parada que afecta a toda la actividad de montaje.
 
 
-Volviendo al problema, ¿cuánta inteligencia es necesaria?
+### Volviendo al problema, ¿cuánta inteligencia es necesaria?
 En esta situación problemática, sería la mínima necesaria y suficiente para incorporar a
 los robots la capacidad de acomodar su desempeño a la alteración de las distancias en
 las trayectorias de las operaciones requeridas.
 
-Otra pregunta a tener en cuenta, ¿por qué incorporar una autonomía o inteligencia
-limitada?
+### Otra pregunta a tener en cuenta, ¿por qué incorporar una autonomía o inteligencia limitada?
 Muy simple, la inteligencia en las máquinas tiene un costo, y en casos como este, los
 robots solo necesitan superar ciertas dificultades claramente delimitadas. Es decir que
 el costo no está linealmente relacionado con el nivel de inteligencia, su crecimiento es
@@ -34,7 +32,8 @@ exponencial, por lo que puede llegar a ser muy elevado, absolutamente injustific
 inabordable
 
 
-
+## Breve descripcion de los 2 tipos de busquedas
+### Buscqueda Exhaustiva
 La búsqueda exhaustiva explora sistemáticamente todas las posibles posiciones hasta encontrar la solución. No utiliza conocimiento previo o heurísticas.
 Para la implementación de esta búsqueda en el código se realizo la búsqueda en profundidad, recorriendo primero la rama izquierda y luego la rama derecha en busca de la solución.
 
@@ -47,7 +46,7 @@ Ineficiencia: puede ser muy costosa en términos de tiempo y recursos, ya que ev
 Escalabilidad: en problemas grandes, el espacio de búsqueda puede ser inmanejable.
 
 
-
+### Buscqueda Heuristica
 La búsqueda heurística utiliza una función de evaluación para guiar la búsqueda hacia las posiciones más prometedoras, en lugar de explorar todas las opciones.
 Para la implementación se tomo como función Heurística, la distancia entre la posición actual y la posición objetivo.
 
@@ -60,11 +59,12 @@ Incompleta o no óptima: si la heurística es inadecuada, puede llevar a una sol
 Diseño de la heurística: requiere conocimiento del problema para definir una función heurística efectiva.
 
 
+## Explcacion conceptual
 Lo primero fue armar el espacio de estados, lo cual se decidió por hacer un árbol, donde la raíz sea la posición actual del block, esta raíz tendría 2 ramas, una para moverse hacia la izquierda y otra hacia la derecha, luego, los nodos pertenecientes a la rama izquierda tendrían solo hijos izquierdos y los nodos pertenecientes a la rama derecha, tendrían solo hijos derechos, esto es porque si se recorre por la rama izquierda se avanzaía hacia la izquierda y el hecho de explorar un hijo derecho seria retroceder hacia la derecha, lo que sería igual a volver al nodo padre.
 La longitud de cada rama seria la longitud total en la que los brazos puedan actuar, donde cada nodo representa una distancia desde la posición inicial del block hasta el nodo, la cual esta medida dependerá de que tan exacto tiene que estar posicionado el block (cm, mm, etc.).
 Las rama izquierda está representada por números negativos y la rama derecha está representada por números positivos, porque se toma como punto central al block en su posición actual, lo que si se tiene que mover a una posición objetivo de -3, quiere decir que se tiene que mover el block de su posición actual 3 pasos a la izquierda, y si la posición objetivo fuera 3, seria 3 pasos a la derecha.
 
 
-##Ejecucion
+## Ejecucion
 La ejeucion correcta seria desde el archivo Busquedas_IA.java, ya que allí se muestra el menú de opciones para elegir que busqueda utilizar y donde se establece toda la estructura de datos para resolver el problema.
 
